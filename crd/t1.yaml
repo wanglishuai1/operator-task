@@ -1,0 +1,14 @@
+apiVersion: api.jtthink.com/v1alpha1
+kind: Task
+metadata:
+  name: mytask
+spec:
+  steps:
+    - name: step1
+      image: busybox:1.28
+      command: ["sh"]
+      args: ["-c", "echo hello world1"]
+    - name: step2
+      image: busybox:1.28
+      command: ["sh"]
+      args: ["-c", "echo hello world2"]
